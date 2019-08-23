@@ -31,6 +31,9 @@ describe Card do
     it "to_s returns a readable String value for Ace, Jack, Queen, King" do
       # Test to ensure that to_s works for cards values 1, and 11-13
       # For example: "Queen of hearts"
+      # The current implementation of to_s does not address this feature
+      # Write the test, see it fail, then modify to_s to make it pass!
+      # (Consider writing a helper method!)
     end
   end
 
