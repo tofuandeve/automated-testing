@@ -26,17 +26,17 @@ describe Deck do
         it "returns a Card object as an output" do
             card = @deck.draw
             expect (card).must_be_instance_of Card
-            expect(@deck.count).must_equal 51
+            expect (@deck.count).must_equal 51
             expect (@deck.cards.include?(card)).must_equal false
         end
         
-        it "raise ArgumentError if the deck is empty" do
+        it "returns nil if the deck is empty" do
             deck1 = Deck.new
             52.times do
                 deck1.draw
             end
             
-            expect (deck1.draw)
+            assert_nil (deck1.draw)
         end
     end
     
