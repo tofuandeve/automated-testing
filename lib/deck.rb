@@ -1,19 +1,19 @@
-
-# deck.rb
-
-require_relative 'card'
-
 class Deck
-
+  attr_reader :cards
+  
   def initialize
-
+    @cards = Card.create_new_deck
   end
-
+  
+  def count
+    return @cards.length
+  end
+  
   def draw
-    # returns a card
+    return @cards.pop
   end
-
+  
   def shuffle
-    # shuffles the deck
+    @cards.shuffle!
   end
 end
